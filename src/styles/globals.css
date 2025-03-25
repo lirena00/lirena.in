@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "ubuntu";
-  src: url("../../public/ubuntu.ttf");
-}
-
 @layer base {
   /* Custom scrollbar */
   ::-webkit-scrollbar {
@@ -20,39 +15,4 @@
   body {
     @apply bg-[#12111a] font-sans;
   }
-}
-
-.card {
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(17, 25, 40, 0.75);
-  border-radius: 12px;
-  border: 2px solid rgba(255, 255, 255, 0.125);
-}
-
-.card2 {
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(17, 25, 40, 0.75);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.125);
-}
-
-.blob {
-  filter: blur(40px);
-  position: absolute;
-  z-index: -1; /* to keep it at below everything else */
-  top: 0; /* to align it at top */
-  left: 0; /* to align it at left */
-  width: 250px;
-  height: 250px;
-  border-radius: 50%; /* to make it circular */
-  background: rgb(255, 255, 255, 0.5);
-}
-
-.gradient-text {
-  background: #cc66ff;
-  background: repeating-linear-gradient(to top left, #cc66ff 0%, #60a5fa 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
