@@ -20,7 +20,7 @@ type CustomItem = {
 export async function GET() {
   try {
     // Initialize parser with custom fields
-    const parser: Parser<CustomFeed, CustomItem> = new Parser({
+    const parser = new Parser<CustomFeed, CustomItem>({
       customFields: {
         item: ["content", "contentSnippet"],
       },
