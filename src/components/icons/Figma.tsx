@@ -1,3 +1,5 @@
+import { type SVGProps } from "react";
+
 export function Figma(props: SVGProps<SVGSVGElement>) {
   return (
     <svg

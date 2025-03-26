@@ -1,3 +1,4 @@
+import { type SVGProps } from "react";
 export function Git(props: SVGProps<SVGSVGElement>) {
   return (
     <svg

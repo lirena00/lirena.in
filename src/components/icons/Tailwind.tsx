@@ -1,3 +1,4 @@
+import { type SVGProps } from "react";
 export function Tailwind(props: SVGProps<SVGSVGElement>) {
   return (
     <svg
