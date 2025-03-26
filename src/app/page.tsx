@@ -8,6 +8,7 @@ import { ArrowUpRight, Terminal } from "lucide-react";
 import { motion } from "motion/react";
 
 import Footer from "~/components/Footer";
+import Header from "~/components/Header";
 import ProjectCard from "~/components/ProjectCard";
 
 import { X } from "~/components/icons/X";
@@ -97,17 +98,18 @@ export default function HomePage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="min-h-screen bg-background px-4 py-12 font-mono text-text lg:px-8">
+      <main className="flex min-h-screen flex-col gap-8 bg-background px-4 py-12 font-mono text-text lg:px-8">
+        <Header />
         <div className="container mx-auto max-w-4xl space-y-16">
           {/* Hero Section - simplified animation */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="flex h-screen flex-col items-center justify-center py-16 text-center"
+            className="flex h-[85vh] flex-col items-center justify-center py-16 text-center"
           >
             <div className="mb-6 inline-block rounded-lg border-2 border-accent px-4 py-1 text-sm font-medium text-accent">
-              Developer • Artist • Weeb
+              Developer • Artist • Wannabe Writer
             </div>
             <h1 className="mb-4 text-5xl font-bold tracking-tight text-white sm:text-6xl">
               <span ref={ref} className="font-mono text-accent" />
@@ -312,9 +314,8 @@ export default function HomePage() {
               </div>
             </motion.div>
           </section>
-
-          <Footer />
         </div>
+        <Footer />
       </main>
     </>
   );

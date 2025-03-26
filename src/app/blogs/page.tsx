@@ -1,20 +1,19 @@
 "use client";
-import { projects } from "~/utils/project";
-import ProjectCard from "~/components/ProjectCard";
+import { SubstackArticles } from "~/components/SubstackArticles";
+import { motion } from "motion/react";
 import Footer from "~/components/Footer";
 import Header from "~/components/Header";
 import { useScramble } from "use-scramble";
 
-export default function Projects() {
+export default function Blogs() {
   const { ref } = useScramble({
-    text: "Projects_",
+    text: "Blogs_",
     speed: 0.5,
     tick: 2,
     step: 1,
     scramble: 5,
     seed: 3,
   });
-
   return (
     <main className="flex min-h-screen flex-col gap-8 bg-background px-4 py-12 font-mono text-text lg:px-8">
       <Header />
@@ -23,19 +22,21 @@ export default function Projects() {
           <h1 className="mb-4 text-3xl font-bold text-accent md:text-4xl">
             <span ref={ref} />
           </h1>
-          <p className="text-lg text-text/60">
-            A showcase of my work and projects. I build things that I would
-            genuinely use and enjoy, because most of my projects are born out of
-            the principle &quot;scratching my own itch&quot;.
+          <p className="max-w-2xl text-lg text-text/60">
+            A collection of my thoughts, ideas, and experiences.
           </p>
         </div>
 
-        <div className="grid flex-grow grid-cols-1 gap-6 sm:grid-cols-2">
-          {projects.map((project, index) => (
-            <ProjectCard key={index} {...project} />
-          ))}
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+          viewport={{ once: true }}
+        >
+          <SubstackArticles />
+        </motion.div>
       </div>
+
       <Footer />
     </main>
   );
