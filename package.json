@@ -23,6 +23,7 @@
     "next": "^15.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "rss-parser": "^3.13.0",
     "use-scramble": "^2.2.15",
     "zod": "^3.23.3"
   },
@@ -43,6 +44,5 @@
   },
   "ct3aMetadata": {
     "initVersion": "7.38.1"
-  },
-  "packageManager": "npm@10.8.1"
+  }
 }

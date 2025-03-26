@@ -1,3 +1,5 @@
+import { type SVGProps } from "react";
+
 export function Stackoverflow(props: SVGProps<SVGSVGElement>) {
   return (
     <svg

@@ -1,3 +1,5 @@
+import { type SVGProps } from "react";
+
 export function Reactjs(props: SVGProps<SVGSVGElement>) {
   return (
     <svg

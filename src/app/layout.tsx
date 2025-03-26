@@ -2,6 +2,7 @@ import "~/styles/globals.css";
 
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Saksham Kushwaha | lirena00 | Portfolio",
@@ -19,7 +20,14 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Script
+          strategy="afterInteractive"
+          src="https://analytics.lirena.in/script.js"
+          data-website-id="7d9f0467-9f61-4fb1-ac4f-6d712106dec5"
+        />
+        {children}
+      </body>
     </html>
   );
 }
