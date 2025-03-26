@@ -21,6 +21,7 @@ import { Substack } from "~/components/icons/Substack";
 
 import { Python } from "~/components/icons/Python";
 import { Cplusplus } from "~/components/icons/Cplusplus";
+import { C } from "~/components/icons/C";
 import { Javascript } from "~/components/icons/Javascript";
 import { Typescript } from "~/components/icons/Typescript";
 import { Css } from "~/components/icons/Css";
@@ -65,11 +66,14 @@ const SectionTitle = ({ title }: { title: string }) => (
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.3 }}
     viewport={{ once: true }}
-    className="mb-6 flex items-center font-mono"
+    className="mb-4 flex items-center font-mono sm:mb-6"
   >
-    <div className="flex items-center rounded-md border border-accent/30 bg-accent/10 px-3 py-1.5">
-      <Terminal size={18} className="mr-2 text-accent" />
-      <h2 className="text-xl font-bold text-white">
+    <div className="flex items-center rounded-md border border-accent/30 bg-accent/10 px-2 py-1 sm:px-3 sm:py-1.5">
+      <Terminal
+        size={18}
+        className="mr-1.5 text-accent sm:mr-2 sm:size-[18px]"
+      />
+      <h2 className="text-base font-bold text-white sm:text-lg md:text-xl">
         {title}
         <span className="blink text-accent">_</span>
       </h2>
@@ -98,32 +102,32 @@ export default function HomePage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex min-h-screen flex-col gap-8 bg-background px-4 py-12 font-mono text-text lg:px-8">
+      <main className="flex min-h-screen flex-col gap-8 bg-background px-4 py-8 font-mono text-text sm:px-6 sm:py-10 lg:px-8 lg:py-12">
         <Header />
-        <div className="container mx-auto max-w-4xl space-y-16">
-          {/* Hero Section - simplified animation */}
+        <div className="container mx-auto max-w-4xl space-y-12 sm:space-y-16">
+          {/* Hero Section - with responsive improvements */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="flex h-[85vh] flex-col items-center justify-center py-16 text-center"
+            className="flex min-h-[60vh] flex-col items-center justify-center py-8 text-center sm:min-h-[70vh] sm:py-12 md:h-[85vh]"
           >
-            <div className="mb-6 inline-block rounded-lg border-2 border-accent px-4 py-1 text-sm font-medium text-accent">
+            <div className="mb-4 inline-block rounded-lg border-2 border-accent px-3 py-1 text-xs font-medium text-accent sm:mb-6 sm:text-sm">
               Developer • Artist • Wannabe Writer
             </div>
-            <h1 className="mb-4 text-5xl font-bold tracking-tight text-white sm:text-6xl">
+            <h1 className="mb-3 text-3xl font-bold tracking-tight text-white sm:mb-4 sm:text-5xl md:text-6xl">
               <span ref={ref} className="font-mono text-accent" />
             </h1>
-            <p className="max-w-2xl text-xl text-gray-400">
+            <p className="max-w-2xl text-base text-gray-400 sm:text-lg md:text-xl">
               A weeb who loves to code, draw and write.
             </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <div className="mt-6 flex flex-wrap justify-center gap-3 sm:mt-8 sm:gap-4">
               <Link
                 href="#connect"
-                className="group relative inline-flex items-center overflow-hidden rounded-md bg-accent px-6 py-2.5 font-semibold text-black transition hover:bg-accent/80"
+                className="group relative inline-flex items-center overflow-hidden rounded-md bg-accent px-4 py-2 font-semibold text-black transition hover:bg-accent/80 sm:px-6 sm:py-2.5"
               >
                 <span className="absolute -end-full transition-all group-hover:end-4">
-                  <ArrowUpRight className="h-5 w-5" />
+                  <ArrowUpRight className="h-4 w-4 sm:h-5 sm:w-5" />
                 </span>
                 <span className="transition-all group-hover:me-4">
                   Get in touch
@@ -131,7 +135,7 @@ export default function HomePage() {
               </Link>
               <Link
                 href="#projects"
-                className="inline-flex items-center rounded-md border border-accent px-6 py-2.5 font-semibold text-accent transition hover:bg-accent/10"
+                className="inline-flex items-center rounded-md border border-accent px-4 py-2 font-semibold text-accent transition hover:bg-accent/10 sm:px-6 sm:py-2.5"
               >
                 View projects
               </Link>
@@ -139,7 +143,7 @@ export default function HomePage() {
           </motion.div>
 
           {/* About Section */}
-          <section id="about" className="space-y-6">
+          <section id="about" className="space-y-4 sm:space-y-6">
             <SectionTitle title="aboutMe" />
 
             <motion.div
@@ -147,9 +151,9 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
               viewport={{ once: true }}
-              className="rounded-lg border border-accent/20 bg-black/40 p-8 backdrop-blur-sm"
+              className="rounded-lg border border-accent/20 bg-black/40 p-5 backdrop-blur-sm sm:p-8"
             >
-              <div className="space-y-4 text-lg leading-relaxed tracking-tighter text-text/90">
+              <div className="space-y-3 text-base leading-relaxed tracking-tighter text-text/90 sm:space-y-4 sm:text-lg">
                 <p>
                   i&apos;m a 19-year-old undergrad developer, always eager to
                   learn new things whenever i get the chance. i&apos;m all about{" "}
@@ -175,10 +179,10 @@ export default function HomePage() {
           </section>
 
           {/* Projects Section */}
-          <section id="projects" className="space-y-6">
+          <section id="projects" className="space-y-4 sm:space-y-6">
             <SectionTitle title="myProjects" />
 
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2">
               {projects.slice(0, 4).map((project, index) => (
                 <ProjectCard key={index} {...project} />
               ))}
@@ -187,15 +191,15 @@ export default function HomePage() {
             <Link
               href="/projects"
               target="_blank"
-              className="group flex w-fit items-center gap-1 rounded-md border border-accent/20 bg-black/30 px-5 py-2.5 font-mono text-sm text-white/80 transition-all hover:border-accent hover:shadow-[0_0_15px_rgba(var(--accent-rgb),0.2)]"
+              className="group flex w-fit items-center gap-1 rounded-md border border-accent/20 bg-black/30 px-4 py-2 font-mono text-xs text-white/80 transition-all hover:border-accent hover:shadow-[0_0_15px_rgba(var(--accent-rgb),0.2)] sm:px-5 sm:py-2.5 sm:text-sm"
             >
               <span>View all projects</span>
-              <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-accent" />
+              <ArrowUpRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-accent sm:h-4 sm:w-4" />
             </Link>
           </section>
 
           {/* Substack Section */}
-          <section id="articles" className="space-y-6">
+          <section id="articles" className="space-y-4 sm:space-y-6">
             <SectionTitle title="latestArticles" />
 
             <motion.div
@@ -210,20 +214,21 @@ export default function HomePage() {
             <Link
               href="https://lirena00.substack.com"
               target="_blank"
-              className="group flex w-fit items-center gap-1 rounded-md border border-accent/20 bg-black/30 px-5 py-2.5 font-mono text-sm text-white/80 transition-all hover:border-accent hover:shadow-[0_0_15px_rgba(var(--accent-rgb),0.2)]"
+              className="group flex w-fit items-center gap-1 rounded-md border border-accent/20 bg-black/30 px-4 py-2 font-mono text-xs text-white/80 transition-all hover:border-accent hover:shadow-[0_0_15px_rgba(var(--accent-rgb),0.2)] sm:px-5 sm:py-2.5 sm:text-sm"
             >
               <span>Read all articles</span>
-              <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-accent" />
+              <ArrowUpRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-accent sm:h-4 sm:w-4" />
             </Link>
           </section>
 
           {/* Skills Section */}
-          <section id="tech-stack" className="space-y-6">
+          <section id="tech-stack" className="space-y-4 sm:space-y-6">
             <SectionTitle title="techStack" />
 
-            <div className="grid grid-cols-3 gap-4 sm:grid-cols-4 md:grid-cols-6">
+            <div className="xs:grid-cols-3 grid grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-4 md:grid-cols-5 lg:grid-cols-6">
               {[
                 { icon: <Python />, name: "Python" },
+                { icon: <C />, name: "C" },
                 { icon: <Cplusplus />, name: "C++" },
                 { icon: <Javascript />, name: "JavaScript" },
                 { icon: <Typescript />, name: "TypeScript" },
@@ -247,7 +252,7 @@ export default function HomePage() {
           </section>
 
           {/* Connect Section */}
-          <section id="connect" className="space-y-6">
+          <section id="connect" className="space-y-4 sm:space-y-6">
             <SectionTitle title="connect" />
 
             <motion.div
@@ -255,9 +260,9 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
               viewport={{ once: true }}
-              className="rounded-lg border border-accent/20 bg-black/40 p-6 backdrop-blur-sm"
+              className="rounded-lg border border-accent/20 bg-black/40 p-4 backdrop-blur-sm sm:p-6"
             >
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-2 sm:gap-3">
                 {[
                   {
                     href: "https://github.com/LiReNa00?utm_source=portfolio",
@@ -301,11 +306,11 @@ export default function HomePage() {
                     target="_blank"
                     aria-label={social.label}
                   >
-                    <div className="group flex items-center rounded-md border border-accent/20 bg-black/30 px-4 py-3 transition-all hover:border-accent hover:shadow-[0_0_15px_rgba(var(--accent-rgb),0.2)]">
-                      <div className="mr-2 text-white/90 transition-all duration-300 group-hover:text-accent">
+                    <div className="group flex items-center rounded-md border border-accent/20 bg-black/30 px-3 py-2 transition-all hover:border-accent hover:shadow-[0_0_15px_rgba(var(--accent-rgb),0.2)] sm:px-4 sm:py-3">
+                      <div className="mr-1.5 text-white/90 transition-all duration-300 group-hover:text-accent sm:mr-2">
                         {social.icon}
                       </div>
-                      <span className="font-mono text-xs text-white/80 group-hover:text-accent">
+                      <span className="font-mono text-[10px] text-white/80 group-hover:text-accent sm:text-xs">
                         {social.label}
                       </span>
                     </div>

@@ -27,7 +27,7 @@ export function SubstackArticles() {
           throw new Error(`Failed to fetch: ${response.status}`);
         }
 
-        const data = await response.json();
+        const data = (await response.json()) as Article[];
         setArticles(data);
         setError(null);
       } catch (err) {
@@ -38,7 +38,7 @@ export function SubstackArticles() {
       }
     }
 
-    fetchArticles();
+    void fetchArticles();
   }, []);
 
   // Show loading state

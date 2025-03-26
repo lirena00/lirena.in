@@ -15,9 +15,6 @@ export default function Header() {
       if (e.key === "p") {
         router.push("/projects");
       }
-      if (e.key === "a") {
-        router.push("/#about");
-      }
       if (e.key === "b") {
         router.push("/blogs");
       }
@@ -48,7 +45,7 @@ export default function Header() {
           <span className="text-accent">[b]</span>logs
         </Link>
       </div>
-      <div className="hover:text-gray-300">
+      <div className="hidden hover:text-gray-300 md:block">
         <Link href="#connect">
           <span className="text-accent">[c]</span>onnect
         </Link>
