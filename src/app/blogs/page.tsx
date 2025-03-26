@@ -17,13 +17,13 @@ export default function Blogs() {
   return (
     <main className="flex min-h-screen flex-col gap-8 bg-background px-4 py-12 font-mono text-text lg:px-8">
       <Header />
-      <div className="container mx-auto max-w-4xl space-y-16">
-        <div className="mb-12">
+      <div className="container mx-auto max-w-4xl space-y-8 sm:space-y-16">
+        <div className="mb-8 sm:mb-12">
           <h1 className="mb-4 text-3xl font-bold text-accent md:text-4xl">
             <span ref={ref} />
           </h1>
-          <p className="max-w-2xl text-lg text-text/60">
-            A collection of my thoughts, ideas, and experiences.
+          <p className="text-base text-text/60 sm:text-lg">
+            A collection of my random thoughts, ideas, and experiences.
           </p>
         </div>
 

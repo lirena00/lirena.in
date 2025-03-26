@@ -38,7 +38,7 @@ export default function ProjectCard({
                 filter: "blur(60px)",
               }}
             />
-            <p className="relative z-10 leading-relaxed text-gray-300">
+            <p className="relative z-10 text-sm leading-relaxed text-gray-300 sm:text-base">
               {description}
             </p>
           </div>
