@@ -28,7 +28,7 @@ export default function Header() {
   }, [router]);
 
   return (
-    <header className="flex items-center justify-between px-4 py-2 font-mono text-gray-400 md:px-12 lg:px-24">
+    <header className="flex items-center justify-between px-4 py-2 font-mono text-sm text-gray-400 sm:text-base md:px-12 lg:px-24">
       <div className="hover:text-gray-300">
         <Link href="/">
           <span className="text-accent">[h]</span>ome
