@@ -7,7 +7,7 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "Saksham Kushwaha | lirena00 | Portfolio",
   description:
-    "Saksham Kushwaha (lirena00), a 19-year-old CS undergrad, is a full-stack developer, programmer, and artist passionate about AI, web development, and creative storytelling. A weeb at heart, I enjoy reading manga, watching anime, and working on my own post-apocalyptic story, soon to be published. Explore projects like Odash, Animood, open-source contributions, and unique anime-inspired tools.",
+    "Saksham Kushwaha (lirena00), a 19-year-old CS undergrad and full-stack developer, blends web dev with anime-inspired creativity. I have built tools like Monochromate and Animood, contribute to open-source, and write sharp one-shot stories drawn from my weeb roots.",
   icons: [{ rel: "icon", url: "/favicon.jpg" }],
   openGraph: {
     title: "Saksham Kushwaha | lirena00",

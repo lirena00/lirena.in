@@ -200,7 +200,7 @@ export default function HomePage() {
 
           {/* Substack Section */}
           <section id="articles" className="space-y-4 sm:space-y-6">
-            <SectionTitle title="latestArticles" />
+            <SectionTitle title="latestBlogs" />
 
             <motion.div
               initial={{ opacity: 0, y: 10 }}
@@ -216,7 +216,7 @@ export default function HomePage() {
               target="_blank"
               className="group flex w-fit items-center gap-1 rounded-md border border-accent/20 bg-black/30 px-4 py-2 font-mono text-xs text-white/80 transition-all hover:border-accent hover:shadow-[0_0_15px_rgba(var(--accent-rgb),0.2)] sm:px-5 sm:py-2.5 sm:text-sm"
             >
-              <span>Read all articles</span>
+              <span>Read all blogs</span>
               <ArrowUpRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-1 group-hover:text-accent sm:h-4 sm:w-4" />
             </Link>
           </section>
