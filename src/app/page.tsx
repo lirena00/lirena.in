@@ -40,7 +40,6 @@ import { Svelte } from "~/components/icons/Svelte";
 
 import { SubstackArticles } from "~/components/SubstackArticles";
 
-// Simplified tech icon with minimal animations
 const TechIcon = ({ icon, name }: { icon: React.ReactNode; name: string }) => (
   <motion.div
     initial={{ opacity: 0, y: 5 }}
@@ -59,7 +58,6 @@ const TechIcon = ({ icon, name }: { icon: React.ReactNode; name: string }) => (
   </motion.div>
 );
 
-// Simplified section title component
 const SectionTitle = ({ title }: { title: string }) => (
   <motion.div
     initial={{ opacity: 0, y: 5 }}
@@ -105,7 +103,6 @@ export default function HomePage() {
       <main className="flex min-h-screen flex-col gap-8 bg-background px-4 py-8 font-mono text-text sm:px-6 sm:py-10 lg:px-8 lg:py-12">
         <Header />
         <div className="container mx-auto max-w-4xl space-y-12 sm:space-y-16">
-          {/* Hero Section - with responsive improvements */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
