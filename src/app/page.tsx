@@ -18,6 +18,8 @@ import { Linkedin } from "~/components/icons/Linkedin";
 import { Mail } from "~/components/icons/Mail";
 import { Github } from "~/components/icons/Github";
 import { Substack } from "~/components/icons/Substack";
+import { Peerlist } from "~/components/icons/Peerlist";
+import { Discord } from "~/components/icons/Discord";
 
 import { Python } from "~/components/icons/Python";
 import { Cplusplus } from "~/components/icons/Cplusplus";
@@ -287,10 +289,22 @@ export default function HomePage() {
                     label: "Substack",
                   },
                   {
+                    href: "https://peerlist.io/lirena00?utm_source=portfolio",
+                    icon: <Peerlist />,
+                    label: "Peerlist",
+                  },
+                  {
+                    href: "https://discord.gg/pdxMMNGWCU",
+                    icon: <Discord />,
+                    label: "Discord",
+                  },
+                  /*{
+                  
                     href: "https://stackoverflow.com/users/13875145/saksham-kushwaha?utm_source=portfolio",
                     icon: <Stackoverflow />,
                     label: "Stack Overflow",
-                  },
+                  
+                  },*/
                   {
                     href: "mailto:sakshamkushwaha12776@gmail.com",
                     icon: <Mail />,
