@@ -1,5 +1,12 @@
 export const projects = [
   {
+    href: "https://compadcn.lirena.in?utm_source=portfolio",
+    imageSrc: "/compadcn.jpg",
+    title: "Compadcn",
+    description:
+      "A cli wrapper for shadcn-cli that let you speedrun throught shadcn/ui setup. Introducing commands such as lint, remove and presets to enhance the workflows of shadcn/ui users.",
+  },
+  {
     href: "https://monochromate.lirena.in?utm_source=portfolio",
     imageSrc: "/odash_banner.jpg",
     title: "Monochromate",
