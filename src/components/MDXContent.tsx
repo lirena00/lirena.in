@@ -166,12 +166,14 @@ const useMDXComponent = (
   components?: Record<string, React.ComponentType>;
 }> => {
   // eslint-disable-next-line @typescript-eslint/no-implied-eval
-  const fn = new Function(code) as () => {
+  const fn = new Function("runtime", code) as (
+    runtime: typeof import("react/jsx-runtime"),
+  ) => {
     default: React.ComponentType<{
       components?: Record<string, React.ComponentType>;
     }>;
   };
-  return fn({ ...runtime }).default;
+  return fn(runtime).default;
 };
 
 interface MDXProps {
