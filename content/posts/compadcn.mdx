@@ -1,0 +1,105 @@
+---
+title: Building the CLI tool that I wish shadcn/ui had
+slug: building-the-cli-tool-that-i-wish-shadcnui-had
+description: In one week, I built compadcn — a CLI wrapper for shadcn/ui that adds interactive installs, linting, presets, and friction-free removals.
+date: Jun 2025, 4
+draft: false
+ext_link:
+  peerlist: https://peerlist.io/lirena00/articles/building-the-cli-tool-that-i-wish-shadcnui-had
+  dev_to: https://dev.to/lirena00/building-the-cli-tool-that-i-wish-shadcnui-had-52c5
+  substack: https://lirena00.substack.com/p/building-the-cli-tool-that-i-wish
+---
+
+## Introduction
+
+So I’ve been using shadcn/ui for about 1–2 years now, and honestly, while I love it, it comes with its fair share of friction, friction you only realize after you actually start using it regularly.
+
+For me, the first major pain point was theming as editing CSS variables was a hassle because of how many there are. Thankfully, **TweakCN** came to the rescue (love this product). But the more I worked with shadcn, the more I realized that the friction was also present somewhere else and that was CLI.
+
+The CLI has like three commands, and I usually only touch two of them: `init` and `add`. But they are so full of friction.
+
+So last week, I decided to build my own open source CLI tool, something that would actually make using shadcn a smoother, more fun experience. The idea was to
+make a shadnc/ui CLI wrapper that handles component setup in a much cleaner and intuitive way.
+
+Oh and the name?
+You’ve got components + addition + shadcn = COMPADCN.
+Yeah, I know. 🔥
+
+I knew nothing about cli tool developments when I started this project. Just some basic knowledge, and then watched some videos, read through codebase of `t3-oss/create-t3-app` and consulted GPT and Claude to finally figure out the tech stack and it turned out to be Typescript + @clack/prompts + commander.js + chalk
+
+And then in a day or two I had the first command working
+
+## compadcn add
+
+This one’s exactly what it sounds like. It lets you add components. But instead of typing like `shadcn@latest add button card calendar` every single time... you just launch a TUI component selection tool, pick what you want, and boom that's all you need it handles the rest. Under the hood, it’s still using the official CLI. But now, _you don’t have to._
+
+![compadcn_add_preview](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/tnfln063t3w65bpongyr.png)
+
+While chatting with a friend about this project, he casually mentioned that he just uses the `--all` flag to install every component up front, to avoid having to add components one by one.
+Honestly? That sounded cursed at first.
+But the more I thought about it, the more it made sense... because the friction is real.
+
+That conversation inspired my second command:
+
+## compadcn lint
+
+It scans your project and lists all the unused shadcn components you’ve installed.
+After a few iterations, I added another prompt that lets you remove those unused components right then and there.
+
+![compadcn_lint_preview](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/d65tcczieqvamd4f3s6n.png)
+
+Now, I had two solid commands... but something still felt missing.
+That’s when presets clicked into place.
+
+## compadcn presets
+
+We all have that list of components we install every single time we start a new project. Even with the TUI from `add`, doing it again and again sucks. So why not make presets?
+
+Presets are simply a list of components you can install with a single line.
+By default, compadcn ships with 9 built-in presets, and you can make your own too. They're stored in `~/.compadcn/custom-presets.json`.
+
+Now you may a list of over 40+ components but the CLI for installing them will just be:
+
+```bash
+compadcn p i <preset_name>
+```
+
+Short, sweet, and done.
+
+You also get 5 subcommands for listing, viewing, deleting, creating, and installing presets.
+Bonus: if you already have a component installed, it won’t add it again. No bloat.
+
+![compadcn_preset_preview](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/4id0rbakmz8p6uw5zsia.png)
+
+and then came my final command:
+
+## compadcn remove
+
+This one’s all about cleanup. If you’re removing a component, you shouldn’t have to manually:
+
+- Delete the component file
+- Remove its import statements
+- Uninstall its dependencies
+
+So compadcn remove does all of that for you.
+
+When you run it, it lists all installed components. You can select the ones to remove, and it will handle everything plus, it prompts you if there are dependencies to uninstall too.
+
+But I had to be careful with internal dependencies.
+For example, if you try to remove the button component but still have calendar installed (which depends on it), the CLI won’t let you break things. It respects those internal links.
+
+Same goes for mutual dependencies, it won’t show you the option to remove shared ones unless both dependents are selected.
+It basically functions as an automated shadcn component removal tool.
+
+![compadcn_remove_preview](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/694dxt2zjxobydjffbhd.png)
+
+That’s where compadcn stands for now, built in under a week, with zero prior CLI experience.
+If you use shadcn in your projects and want to save time, reduce repetition, and stay in flow, I genuinely think it’ll make your workflow better and let you speedrun through several of tedious tasks
+
+I’d love feedback, stars on GitHub, or even bug reports.
+The CLI is open source:
+https://github.com/lirena00/compadcn
+
+also designed a cool landing page for it if you are up for it haha : https://compadcn.lirena.in/
+
+PS: thanks for reading it so far, I launched this product at producthunt and peerlist but so far it's not doing that good so if you would like to support it a bit you can find the links on the landing page and yea that's it!! thank you once again.

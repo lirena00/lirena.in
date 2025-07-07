@@ -1,9 +1,10 @@
 "use client";
-import { SubstackArticles } from "~/components/SubstackArticles";
+
 import { motion } from "motion/react";
 import Footer from "~/components/Footer";
 import Header from "~/components/Header";
 import { useScramble } from "use-scramble";
+import { BlogArticles } from "~/components/BlogArticles";
 
 export default function Blogs() {
   const { ref } = useScramble({
@@ -33,7 +34,7 @@ export default function Blogs() {
           transition={{ duration: 0.3 }}
           viewport={{ once: true }}
         >
-          <SubstackArticles />
+          <BlogArticles />
         </motion.div>
       </div>
 
