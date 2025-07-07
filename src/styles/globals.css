@@ -13,6 +13,6 @@
   }
 
   body {
-    @apply bg-[#12111a] font-sans;
+    @apply bg-[#111111] font-sans;
   }
 }
