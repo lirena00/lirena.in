@@ -37,16 +37,16 @@ const CodeBlock = ({
   };
 
   return (
-    <div className="relative">
+    <div className="group relative my-6">
       <pre
-        className="mb-4 overflow-x-auto rounded-md border border-accent/20 bg-black/30 p-4 pr-12 text-white/80"
+        className="overflow-x-auto rounded-lg border border-accent/20 bg-black/40 p-4 pr-12 text-sm leading-relaxed text-white/90 sm:text-base"
         {...props}
       >
         {children}
       </pre>
       <button
         onClick={handleCopy}
-        className="absolute right-2 top-2 rounded-md border border-accent/20 bg-black/50 p-2 text-accent transition-colors hover:bg-accent/10"
+        className="absolute right-2 top-2 rounded-md border border-accent/20 bg-black/60 p-2 text-accent opacity-0 transition-all duration-200 hover:border-accent/40 hover:bg-accent/10 focus:opacity-100 group-hover:opacity-100"
         title={copied ? "Copied!" : "Copy code"}
       >
         {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
@@ -57,13 +57,16 @@ const CodeBlock = ({
 
 const sharedComponents = {
   h1: ({ children, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
-    <h1 className="mb-6 text-3xl font-bold text-white sm:text-4xl" {...props}>
+    <h1
+      className="mb-6 mt-8 text-2xl font-bold leading-tight text-white first:mt-0 sm:text-3xl md:text-4xl"
+      {...props}
+    >
       {children}
     </h1>
   ),
   h2: ({ children, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h2
-      className="mb-4 mt-8 text-2xl font-semibold text-white/90 sm:text-3xl"
+      className="mb-4 mt-8 text-xl font-semibold leading-tight text-white/95 first:mt-0 sm:text-2xl md:text-3xl"
       {...props}
     >
       {children}
@@ -71,16 +74,11 @@ const sharedComponents = {
   ),
   h3: ({ children, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h3
-      className="mb-3 mt-6 text-xl font-medium text-white/80 sm:text-2xl"
+      className="mb-3 mt-6 text-lg font-medium leading-tight text-white/90 first:mt-0 sm:text-xl md:text-2xl"
       {...props}
     >
       {children}
     </h3>
-  ),
-  p: ({ children, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (
-    <p className="mb-4 leading-relaxed text-white/70" {...props}>
-      {children}
-    </p>
   ),
   a: ({
     children,
@@ -89,7 +87,7 @@ const sharedComponents = {
   }: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
     <a
       href={href}
-      className="text-accent underline transition-colors hover:text-accent/80"
+      className="text-accent underline decoration-accent/50 underline-offset-2 transition-all duration-200 hover:text-accent/80 hover:decoration-accent/80"
       {...props}
     >
       {children}
@@ -97,7 +95,7 @@ const sharedComponents = {
   ),
   code: ({ children, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <code
-      className="rounded border border-accent/20 bg-accent/10 px-2 py-1 font-mono text-sm text-accent"
+      className="rounded-md border border-accent/20 bg-accent/10 px-1.5 py-0.5 font-mono text-sm text-accent sm:px-2 sm:py-1"
       {...props}
     >
       {children}
@@ -109,7 +107,7 @@ const sharedComponents = {
     ...props
   }: React.HTMLAttributes<HTMLQuoteElement>) => (
     <blockquote
-      className="my-4 border-l-4 border-accent/50 bg-accent/5 p-4 italic text-white/70"
+      className="my-6 border-l-4 border-accent/50 bg-accent/5 p-4 text-sm italic leading-relaxed text-white/80 sm:p-6 sm:text-base"
       {...props}
     >
       {children}
@@ -117,7 +115,7 @@ const sharedComponents = {
   ),
   ul: ({ children, ...props }: React.HTMLAttributes<HTMLUListElement>) => (
     <ul
-      className="mb-4 list-inside list-disc space-y-2 text-white/70"
+      className="mb-4 ml-4 list-disc space-y-2 text-sm text-white/75 sm:ml-6 sm:text-base"
       {...props}
     >
       {children}
@@ -125,36 +123,33 @@ const sharedComponents = {
   ),
   ol: ({ children, ...props }: React.HTMLAttributes<HTMLOListElement>) => (
     <ol
-      className="mb-4 list-inside list-decimal space-y-2 text-white/70"
+      className="mb-4 ml-4 list-decimal space-y-2 text-sm text-white/75 sm:ml-6 sm:text-base"
       {...props}
     >
       {children}
     </ol>
   ),
   li: ({ children, ...props }: React.HTMLAttributes<HTMLLIElement>) => (
-    <li className="text-white/70" {...props}>
+    <li className="leading-relaxed text-white/75" {...props}>
       {children}
     </li>
   ),
-
   strong: ({ children, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <strong className="font-semibold text-white" {...props}>
       {children}
     </strong>
   ),
   em: ({ children, ...props }: React.HTMLAttributes<HTMLElement>) => (
-    <em className="italic text-white/80" {...props}>
+    <em className="italic text-white/90" {...props}>
       {children}
     </em>
   ),
-  hr: ({ ...props }: React.HTMLAttributes<HTMLHRElement>) => (
-    <hr className="my-8 border-accent/30" {...props} />
-  ),
+
   img: ({ src, alt, ...props }: React.ImgHTMLAttributes<HTMLImageElement>) => (
     <img
       src={src}
       alt={alt}
-      className="my-4 max-w-full rounded-lg border-2 border-accent/20"
+      className="mx-auto my-6 max-w-full rounded-lg border border-accent/20 sm:my-8"
       {...props}
     />
   ),
