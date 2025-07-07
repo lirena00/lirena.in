@@ -28,7 +28,7 @@ export async function GET(request: NextRequest) {
         <div tw="flex flex-col justify-between w-full h-full p-12 relative z-10">
           <div tw="flex items-center mb-8">
             <div tw="w-16 h-1 bg-[#32dfa0] mr-4 rounded-full"></div>
-            <span tw="text-lg font-medium text-[#8fd8bd] tracking-wide">
+            <span tw="text-lg font-medium text-[#32dfa0] tracking-wide">
               lirena00
             </span>
           </div>

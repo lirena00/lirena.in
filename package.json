@@ -28,6 +28,7 @@
     "zod": "^3.23.3"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.11",
     "@types/eslint": "^8.56.10",
     "@types/node": "^20.14.10",
     "@types/react": "^18.3.3",
@@ -38,8 +39,8 @@
     "eslint-config-next": "^15.0.1",
     "postcss": "^8.4.39",
     "prettier": "^3.3.2",
-    "prettier-plugin-tailwindcss": "^0.6.5",
-    "tailwindcss": "^3.4.3",
+    "prettier-plugin-tailwindcss": "^0.6.13",
+    "tailwindcss": "^4.1.11",
     "typescript": "^5.5.3",
     "velite": "^0.2.4"
   },

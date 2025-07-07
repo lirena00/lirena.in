@@ -30,7 +30,7 @@ export default function Projects() {
           </p>
         </div>
 
-        <div className="grid flex-grow grid-cols-1 gap-6 sm:grid-cols-2">
+        <div className="grid grow grid-cols-1 gap-6 sm:grid-cols-2">
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} />
           ))}

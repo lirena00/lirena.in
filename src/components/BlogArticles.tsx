@@ -24,13 +24,13 @@ export function BlogArticles() {
           <div key={i} className="animate-pulse">
             <div className="group relative h-full overflow-hidden rounded-md border border-accent/20 bg-black/40">
               <div className="flex border-b border-accent/20 bg-accent/10 px-3 py-1.5">
-                <div className="h-5 w-3/4 rounded bg-accent/20"></div>
+                <div className="h-5 w-3/4 rounded-sm bg-accent/20"></div>
               </div>
               <div className="p-4">
-                <div className="h-12 rounded bg-accent/10"></div>
+                <div className="h-12 rounded-sm bg-accent/10"></div>
               </div>
               <div className="flex items-center justify-between px-4 py-2">
-                <div className="h-3 w-1/4 rounded bg-accent/10"></div>
+                <div className="h-3 w-1/4 rounded-sm bg-accent/10"></div>
               </div>
             </div>
           </div>

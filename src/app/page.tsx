@@ -149,7 +149,7 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
               viewport={{ once: true }}
-              className="rounded-lg border border-accent/20 bg-black/40 p-5 backdrop-blur-sm sm:p-8"
+              className="rounded-lg border border-accent/20 bg-black/40 p-5 backdrop-blur-xs sm:p-8"
             >
               <div className="space-y-3 text-base leading-relaxed tracking-tighter text-text/90 sm:space-y-4 sm:text-lg">
                 <p>
@@ -258,7 +258,7 @@ export default function HomePage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3 }}
               viewport={{ once: true }}
-              className="rounded-lg border border-accent/20 bg-black/40 p-4 backdrop-blur-sm sm:p-6"
+              className="rounded-lg border border-accent/20 bg-black/40 p-4 backdrop-blur-xs sm:p-6"
             >
               <div className="flex flex-wrap gap-2 sm:gap-3">
                 {[
