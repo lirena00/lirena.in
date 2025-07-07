@@ -12,7 +12,6 @@ import Header from "~/components/Header";
 import ProjectCard from "~/components/ProjectCard";
 
 import { X } from "~/components/icons/X";
-import { Stackoverflow } from "~/components/icons/Stackoverflow";
 import { Leetcode } from "~/components/icons/Leetcode";
 import { Linkedin } from "~/components/icons/Linkedin";
 import { Mail } from "~/components/icons/Mail";
@@ -40,7 +39,7 @@ import { Psql } from "~/components/icons/Psql";
 import { Supabase } from "~/components/icons/Supabase";
 import { Svelte } from "~/components/icons/Svelte";
 
-import { SubstackArticles } from "~/components/SubstackArticles";
+import { BlogArticles } from "~/components/BlogArticles";
 
 const TechIcon = ({ icon, name }: { icon: React.ReactNode; name: string }) => (
   <motion.div
@@ -207,7 +206,7 @@ export default function HomePage() {
               transition={{ duration: 0.3 }}
               viewport={{ once: true }}
             >
-              <SubstackArticles />
+              <BlogArticles />
             </motion.div>
 
             <Link

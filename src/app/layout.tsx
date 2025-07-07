@@ -21,11 +21,13 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
       <body>
-        <Script
-          strategy="afterInteractive"
-          src="https://analytics.lirena.in/script.js"
-          data-website-id="7d9f0467-9f61-4fb1-ac4f-6d712106dec5"
-        />
+        {process.env.NODE_ENV === "production" && (
+          <Script
+            strategy="afterInteractive"
+            src="https://analytics.lirena.in/script.js"
+            data-website-id="7d9f0467-9f61-4fb1-ac4f-6d712106dec5"
+          />
+        )}
         {children}
       </body>
     </html>
