@@ -63,7 +63,13 @@ export async function GET(request: NextRequest) {
                 <rect width="18" height="18" x="3" y="4" rx="2" />
                 <path d="M3 10h18" />
               </svg>
-              <span tw="text-xl font-medium">{date}</span>
+              <span tw="text-xl font-medium">
+                {new Date(date).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </span>
             </div>
             <div
               style={{ fontFamily: "Jetbrains Mono", gap: "12px" }}
@@ -83,7 +89,9 @@ export async function GET(request: NextRequest) {
                 <circle cx="12" cy="12" r="10" />
                 <path d="M12 6V12L16 14" />
               </svg>
-              <span tw="text-xl font-medium">{readingTime}</span>
+              <span tw="text-xl font-medium">
+                {Math.ceil(Number(readingTime))} min
+              </span>
             </div>
           </div>
         </div>
