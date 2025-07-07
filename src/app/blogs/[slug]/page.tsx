@@ -7,6 +7,7 @@ import Footer from "~/components/Footer";
 import { Substack } from "~/components/icons/Substack";
 import { Devto } from "~/components/icons/Devto";
 import { Peerlist } from "~/components/icons/Peerlist";
+import type { Viewport } from "next";
 
 export default async function Post({
   params,
@@ -113,6 +114,9 @@ export default async function Post({
   );
 }
 
+export const viewport: Viewport = {
+  themeColor: "#32dfa0",
+};
 export async function generateMetadata({
   params,
 }: {
@@ -126,10 +130,7 @@ export async function generateMetadata({
       title: "Post Not Found",
     };
   }
-  const ogUrl = new URL(
-    "/api/og",
-    process.env.NEXT_PUBLIC_URL ?? "http://localhost:3000",
-  );
+  const ogUrl = new URL("https://www.lirena.in/api/og");
   ogUrl.searchParams.set("title", post.title);
   if (post.date) ogUrl.searchParams.set("date", post.date);
   if (post.metadata?.readingTime)
