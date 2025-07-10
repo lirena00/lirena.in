@@ -189,7 +189,6 @@ export default function HomePage() {
 
             <Link
               href="/projects"
-              target="_blank"
               className="group border-accent/20 hover:border-accent flex w-fit items-center gap-1 rounded-md border bg-black/30 px-4 py-2 font-mono text-xs text-white/80 transition-all hover:shadow-[0_0_15px_rgba(var(--accent-rgb),0.2)] sm:px-5 sm:py-2.5 sm:text-sm"
             >
               <span>View all projects</span>
@@ -211,8 +210,7 @@ export default function HomePage() {
             </motion.div>
 
             <Link
-              href="https://lirena00.substack.com"
-              target="_blank"
+              href="/blogs"
               className="group border-accent/20 hover:border-accent flex w-fit items-center gap-1 rounded-md border bg-black/30 px-4 py-2 font-mono text-xs text-white/80 transition-all hover:shadow-[0_0_15px_rgba(var(--accent-rgb),0.2)] sm:px-5 sm:py-2.5 sm:text-sm"
             >
               <span>Read all blogs</span>

@@ -27,13 +27,7 @@ export const projects = [
     description:
       "Animood is an AI-powered anime recommendation platform that suggests anime based on your mood. Featuring genre-specific recommendations, history tracking, and personalized anime lists, it's perfect for anime enthusiasts.",
   },
-  {
-    href: "https://aniray.lirena.in?utm_source=portfolio",
-    imageSrc: "/aniray_banner.jpg",
-    title: "Aniray",
-    description:
-      "Aniray is an anime streaming platform built with Next.js and Tailwind CSS. It offers a seamless interface and scrapes anime from various sources, making it easy to discover and stream your favorite shows.",
-  },
+
   {
     href: "https://top.gg/bot/855532494035484743?utm_source=portfolio",
     imageSrc: "/clover.jpg",
@@ -69,32 +63,12 @@ export const projects = [
     description:
       "Siesta is a private music-focused Discord bot built using the same framework as Clover. It specializes in high-quality music playback and features tailored for specific servers.",
   },
-  {
-    href: "https://github.com/LiReNa00/Manga-Miner?utm_source=portfolio",
-    imageSrc: "/manga_miner.jpg",
-    title: "Manga Miner",
-    description:
-      "Manga Miner is a Python-based manga scraping tool built with BeautifulSoup. It enables users to scrape and download manga from multiple sources, offering the option to save manga as PDFs.",
-  },
+
   {
     href: "https://newsense.lirena.in?utm_source=portfolio",
     imageSrc: "/newsense.jpg",
     title: "Newsense",
     description:
       "Newsense is a Next.js-powered news aggregator that uses AI to summarize articles into concise points. Save time while staying informed with this efficient and user-friendly platform.",
-  },
-  {
-    href: "#",
-    imageSrc: "/portfolio.jpg",
-    title: "Portfolio",
-    description:
-      "This portfolio website, built with Next.js and Tailwind CSS, showcases major projects, skills, and achievements. Discover my journey as a developer and explore the technologies I use.",
-  },
-  {
-    href: "#",
-    imageSrc: "/dash.jpg",
-    title: "Dash",
-    description:
-      "Dash is an in-development homepage for browsers, featuring quick links, weather updates, and to-do lists. Built with Next.js and Tailwind CSS, it's designed for productivity and convenience.",
   },
 ];
