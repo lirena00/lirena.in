@@ -1,5 +1,12 @@
 export const projects = [
   {
+    href: "https://leetjump.lirena.in?utm_source=portfolio",
+    imageSrc: "/leetjump.png",
+    title: "LeetJump",
+    description:
+      "A powerful browser extension for instant LeetCode problem navigation. Search 3000+ problems with Alt+L keyboard shortcut, featuring slash commands, problem history, dark mode, and offline-ready caching for seamless coding practice.",
+  },
+  {
     href: "https://compadcn.lirena.in?utm_source=portfolio",
     imageSrc: "/compadcn.png",
     title: "Compadcn",
