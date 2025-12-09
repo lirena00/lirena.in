@@ -177,6 +177,37 @@ export default function HomePage() {
             </motion.div>
           </section>
 
+          {/* Work Section */}
+          <section id="work" className="space-y-4 sm:space-y-6">
+            <SectionTitle title="workExperience" />
+
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+              viewport={{ once: true }}
+              className="border-accent/20 rounded-lg border bg-black/40 p-5 backdrop-blur-xs sm:p-8"
+            >
+              <div className="space-y-4">
+                <div className="flex flex-col space-y-1">
+                  <h3 className="text-xl font-bold text-white sm:text-2xl">
+                    Mocha
+                  </h3>
+                  <p className="text-accent text-sm font-medium sm:text-base">
+                    Founding Engineer
+                  </p>
+                  <p className="font-mono text-xs text-gray-400 sm:text-sm">
+                    Jul 2025 - Oct 2025
+                  </p>
+                </div>
+                <p className="text-text/90 text-base leading-relaxed tracking-tighter sm:text-lg">
+                  Built an AI native email client designed for speed and ease of
+                  use.
+                </p>
+              </div>
+            </motion.div>
+          </section>
+
           {/* Projects Section */}
           <section id="projects" className="space-y-4 sm:space-y-6">
             <SectionTitle title="myProjects" />
