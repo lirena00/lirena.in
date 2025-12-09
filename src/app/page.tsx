@@ -3,6 +3,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import { projects } from "~/utils/project";
+import { workExperiences } from "~/utils/work";
 import { useScramble } from "use-scramble";
 import { ArrowUpRight, Terminal } from "lucide-react";
 import { motion } from "motion/react";
@@ -181,31 +182,42 @@ export default function HomePage() {
           <section id="work" className="space-y-4 sm:space-y-6">
             <SectionTitle title="workExperience" />
 
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
-              viewport={{ once: true }}
-              className="border-accent/20 rounded-lg border bg-black/40 p-5 backdrop-blur-xs sm:p-8"
-            >
-              <div className="space-y-4">
-                <div className="flex flex-col space-y-1">
-                  <h3 className="text-xl font-bold text-white sm:text-2xl">
-                    Mocha
-                  </h3>
-                  <p className="text-accent text-sm font-medium sm:text-base">
-                    Founding Engineer
-                  </p>
-                  <p className="font-mono text-xs text-gray-400 sm:text-sm">
-                    Jul 2025 - Oct 2025
-                  </p>
-                </div>
-                <p className="text-text/90 text-base leading-relaxed tracking-tighter sm:text-lg">
-                  Built an AI native email client designed for speed and ease of
-                  use.
-                </p>
-              </div>
-            </motion.div>
+            <div className="space-y-3 sm:space-y-4">
+              {workExperiences.map((work, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3 }}
+                  viewport={{ once: true }}
+                >
+                  <Link
+                    href={work.companyUrl}
+                    target="_blank"
+                    className="group block"
+                  >
+                    <div className="border-accent/20 hover:border-accent/40 rounded-lg border bg-black/20 p-4 transition-all duration-300 hover:bg-black/30 sm:p-6">
+                      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                        <div className="space-y-1">
+                          <h3 className="group-hover:text-accent text-lg font-bold text-white transition-colors duration-300 sm:text-xl">
+                            {work.company}
+                          </h3>
+                          <p className="text-sm font-medium text-white/70 sm:text-base">
+                            {work.role}
+                          </p>
+                        </div>
+                        <p className="font-mono text-xs text-gray-400 sm:text-sm">
+                          {work.duration}
+                        </p>
+                      </div>
+                      <p className="text-text/80 mt-3 text-sm leading-relaxed sm:text-base">
+                        {work.description}
+                      </p>
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
           </section>
 
           {/* Projects Section */}
