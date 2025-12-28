@@ -66,7 +66,7 @@ const sharedComponents = {
   ),
   h2: ({ children, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h2
-      className="mt-10 mb-6 text-2xl leading-tight font-semibold text-white/95 first:mt-0 sm:text-3xl md:text-4xl"
+      className="mt-10 mb-6 text-xl leading-tight font-semibold text-white/95 first:mt-0 sm:text-2xl md:text-3xl"
       {...props}
     >
       {children}
