@@ -1,5 +1,13 @@
 export const workExperiences = [
   {
+    company: "LocalHost HQ",
+    companyUrl: "https://mocha.email",
+    role: "Software Engineer",
+    duration: "Jul 2026 - Present",
+    description:
+      "Building comapny's internal tools for better management.",
+  },
+  {
     company: "Mocha",
     companyUrl: "https://mocha.email",
     role: "Founding Engineer",

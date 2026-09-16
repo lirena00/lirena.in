@@ -268,8 +268,8 @@ export default function HomePage() {
             <div className="xs:grid-cols-3 grid grid-cols-3 gap-2 sm:grid-cols-4 sm:gap-4 md:grid-cols-5 lg:grid-cols-6">
               {[
                 { icon: <Python />, name: "Python" },
-                { icon: <C />, name: "C" },
-                { icon: <Cplusplus />, name: "C++" },
+                // { icon: <C />, name: "C" },
+                // { icon: <Cplusplus />, name: "C++" },
                 { icon: <Javascript />, name: "JavaScript" },
                 { icon: <Typescript />, name: "TypeScript" },
                 { icon: <Html />, name: "HTML" },
@@ -277,7 +277,7 @@ export default function HomePage() {
                 { icon: <Tailwind />, name: "Tailwind" },
                 { icon: <Reactjs />, name: "React" },
                 { icon: <Nextjs />, name: "Next.js" },
-                { icon: <Svelte />, name: "Svelte" },
+                // { icon: <Svelte />, name: "Svelte" },
                 { icon: <Prisma />, name: "Prisma" },
                 { icon: <Drizzle />, name: "Drizzle" },
                 { icon: <Psql />, name: "PostgreSQL" },
@@ -335,7 +335,7 @@ export default function HomePage() {
                     label: "Peerlist",
                   },
                   {
-                    href: "https://discord.gg/pdxMMNGWCU",
+                    href: "https://discord.gg/UAfJmgX74e",
                     icon: <Discord />,
                     label: "Discord",
                   },
