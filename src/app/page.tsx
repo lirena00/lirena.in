@@ -155,7 +155,7 @@ export default function HomePage() {
             >
               <div className="text-text/90 space-y-3 text-base leading-relaxed tracking-tighter sm:space-y-4 sm:text-lg">
                 <p>
-                  i&apos;m a 19-year-old undergrad developer, always eager to
+                  i&apos;m a 21-year-old undergrad developer, always eager to
                   learn new things whenever i get the chance. i&apos;m all about{" "}
                   <span className="text-accent font-medium">
                     scratching my own itch,{" "}
